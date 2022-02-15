@@ -1,0 +1,29 @@
+{% extends 'price/base.html' %}
+{% block title %}Тут будет цена{% endblock %}
+{% block content %}
+    <h1>Зарегистрированная цена производителя</h1>
+    <br>
+
+
+    <h2><p class="lek_name">{{ lek }}</p></h2>
+
+    <p>{{ lek.lek_form|linebreaks }}</p>
+    <p>Производитель: {{ lek.name_factory }}</p>
+    <p>Начиная с даты: {{ prices.date_in|date:"SHORT_DATE_FORMAT" }} - </p>
+    <h3 class="lek_name">цена производителя: {{ prices.price }} руб</h3><br>
+        <h2>Максимальная цена в аптеке: </h2><h1 class="lek_name">{{ price }}</h1>
+
+
+
+
+{#        <p>{{ price.date_out }}</p>#}
+
+{#    {% for price in prices %}#}
+{#        <h3>Выпуск с даты: {{ price.date_in|date:"SHORT_DATE_FORMAT" }} - цена производителя: {{ price.price }} руб</h3>#}
+{#        <p>{{ price.date_out }}</p>#}
+{#    {% endfor %}#}
+
+
+    <h3> <a href="{% url 'lek_search' %}">Вернуться к поиску</a></h3>
+
+{% endblock %}

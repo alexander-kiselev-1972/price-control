@@ -1,0 +1,6 @@
+{% extends 'price/base.html' %}
+{% block title %}Данный препарат не найден{% endblock %}
+{% block content %}
+    <h1>Данный препарат не включен в список ЖНВЛС или Вы ошиблись при вводе</h1>
+    <h3><a href="{% url 'lek_search' %}">Повторить поиск?</a> </h3>
+{% endblock %}
