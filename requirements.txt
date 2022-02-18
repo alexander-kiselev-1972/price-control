@@ -3,6 +3,7 @@ beautifulsoup4==4.10.0
 Django==4.0.1
 django-bootstrap5==21.3
 django-extensions==3.1.5
+django-runscript==0.1.1
 psycopg2-binary==2.9.3
 soupsieve==2.3.1
 sqlparse==0.4.2

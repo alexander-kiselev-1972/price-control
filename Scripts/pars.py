@@ -11,7 +11,7 @@ import datetime
 
 
 def set_to_base(NameWorkList, NameTable):
-    book = xlrd.open_workbook('1.xls')
+    book = xlrd.open_workbook('../price/1.xls')
     # print("The number of worksheets is {0}".format(book.nsheets))
     # print("Worksheet name(s): {0}".format(book.sheet_names()))
 
@@ -182,7 +182,7 @@ def set_to_history_price(file_object):
 
 
 def run():
-    book = pars_xls('1.xls')
+    book = pars_xls('../price/1.xls')
 
     set_to_mnn_table(book)
     set_to_lek(book)
