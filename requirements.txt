@@ -8,3 +8,6 @@ psycopg2-binary==2.9.3
 soupsieve==2.3.1
 sqlparse==0.4.2
 xlrd==2.0.1
+
+schedule~=1.1.0
+django-scheduler~=0.9.5

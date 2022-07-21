@@ -1,3 +1,5 @@
+import os
+
 from django.core.exceptions import ObjectDoesNotExist
 from django.core.management.base import BaseCommand, CommandError
 import xlrd
@@ -196,8 +198,9 @@ class Command(BaseCommand):
 
 a = Command()
 
-book = a.pars_xls('./price/1.xls')
+book = a.pars_xls('price/management/commands/files/1.xls')
 
 a.set_to_mnn_table(book)
 a.set_to_lek(book)
 a.set_to_history_price(book)
+os.unlink('price/management/commands/files/1.xls')
